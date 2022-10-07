@@ -1,3 +1,6 @@
+#canvas {
+    width: 100%;
+}
 #name {
     color: white;
     background-color: blue;
@@ -6,9 +9,21 @@
     color: white;
     background-color: blue;
 }
+body {
+    background-color: chocolate;
+}
 button {
     padding: 7px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+footer {
+    background-color: bisque;
+}
+header {
+    background-color: brown;
+}
+main {
+    background-color: blanchedalmond;
 }
