@@ -6,3 +6,9 @@
     color: white;
     background-color: blue;
 }
+button {
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
