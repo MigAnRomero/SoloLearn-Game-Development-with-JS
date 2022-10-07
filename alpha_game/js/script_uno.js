@@ -1,6 +1,12 @@
 //Funciones
-function hit(power) {
-    console.log("Hit with "+power);
+function hit() {
+    health = health / 2;
+    if(health <= 1) {
+        alert("Game over!");
+    }
+    else {
+        console.log(health);
+    }
 }
 
 function hello() {
