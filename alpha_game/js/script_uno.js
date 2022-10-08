@@ -40,6 +40,11 @@ window.onload = function() {
 
     // Dibujar un rectangulo:
     // context.rect(x, y, width, height);
-    context.rect(50, 50, 200, 150);
+    // context.rect(50, 50, 200, 150);
+    // context.stroke();
+
+    // Dibujar un circulo:
+    // context.arc(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise);
+    context.arc(300, 200, 100, 0, 2 * Math.PI);
     context.stroke();
 }
