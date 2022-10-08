@@ -1,4 +1,4 @@
-//Funciones
+// Funciones
 function hit() {
     health = health / 2;
     if(health <= 1) {
@@ -26,3 +26,15 @@ window.onload = function() {
 };
 
 let health = 100;
+// Canvas
+window.onload = function() {
+    let canvas = document.getElementById('canvas');
+    let context = canvas.getContext("2d");
+    context.moveTo(50, 100);
+    context.lineTo(400, 200);
+    context.stroke();
+    
+    context.moveTo(0, 0);
+    context.lineTo(600, 400);
+    context.stroke();
+}
