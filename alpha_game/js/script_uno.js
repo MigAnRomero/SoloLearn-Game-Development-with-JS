@@ -30,11 +30,16 @@ let health = 100;
 window.onload = function() {
     let canvas = document.getElementById('canvas');
     let context = canvas.getContext("2d");
-    context.moveTo(50, 100);
-    context.lineTo(400, 200);
-    context.stroke();
+    // context.moveTo(50, 100);
+    // context.lineTo(400, 200);
+    // context.stroke();
     
-    context.moveTo(0, 0);
-    context.lineTo(600, 400);
+    // context.moveTo(0, 0);
+    // context.lineTo(600, 400);
+    // context.stroke();
+
+    // Dibujar un rectangulo:
+    // context.rect(x, y, width, height);
+    context.rect(50, 50, 200, 150);
     context.stroke();
 }
