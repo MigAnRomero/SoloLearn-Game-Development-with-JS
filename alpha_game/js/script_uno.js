@@ -73,13 +73,23 @@ window.onload = function() {
     // context.stroke();
 
     // Dibujar multiples figuras
-    context.beginPath();
-    context.rect(50, 50, 300, 200);
-    context.fillStyle = "#1775b7";
-    context.fill();
+    // context.beginPath();
+    // context.rect(50, 50, 300, 200);
+    // context.fillStyle = "#1775b7";
+    // context.fill();
 
+    // context.beginPath();
+    // context.arc(300, 200, 100, 0, 2 * Math.PI);
+    // context.fillStyle = "#de4646";
+    // context.fill();
+
+    // Colocando letras al canvas
     context.beginPath();
-    context.arc(300, 200, 100, 0, 2 * Math.PI);
-    context.fillStyle = "#de4646";
-    context.fill();
+    context.font = '42px Arial';
+    context.fillStyle = 'red';
+    context.strokeStyle = "grey";
+    context.fillText("A", 0, 30);
+    context.fillText("B", 10, 200);
+    context.fillText("C", 200, 30);
+    context.strokeText("Hello world", 200, 100);
 }
