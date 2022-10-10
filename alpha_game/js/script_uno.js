@@ -45,6 +45,41 @@ window.onload = function() {
 
     // Dibujar un circulo:
     // context.arc(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise);
+    // context.arc(300, 200, 100, 0, 2 * Math.PI);
+    // context.stroke();
+
+    // Triangulo con lineas de color rojo
+    // context.rect(50, 50, 200, 150);
+    // context.fillStyle = "greenyellow";
+    // context.fill();
+    // context.lineWidth = 10;
+    // context.strokeStyle = "red";
+    // context.stroke();
+    
+    // Dibujar otra figura
+    // context.rect(50, 220, 200, 150);
+    // context.fillStyle = "#5e9860";
+    // context.fill();
+    // context.lineWidth = 10;
+    // context.strokeStyle = "#af1f1f";
+    // context.stroke();
+
+    // Circulo
+    // context.arc(300, 200, 100, 0, 2 * Math.PI);
+    // context.fillStyle = "#de4646";
+    // context.fill();
+    // context.lineWidth = 6;
+    // context.strokeStyle = "#505050";
+    // context.stroke();
+
+    // Dibujar multiples figuras
+    context.beginPath();
+    context.rect(50, 50, 300, 200);
+    context.fillStyle = "#1775b7";
+    context.fill();
+
+    context.beginPath();
     context.arc(300, 200, 100, 0, 2 * Math.PI);
-    context.stroke();
+    context.fillStyle = "#de4646";
+    context.fill();
 }
