@@ -92,4 +92,16 @@ window.onload = function() {
     context.fillText("B", 10, 200);
     context.fillText("C", 200, 30);
     context.strokeText("Hello world", 200, 100);
+
+    context.beginPath();
+    var img = new Image();
+    img.src = 'https://blob.sololearn.com/avatars/sololearn.jpg';
+    // context.drawImage(img, x, y, width, height);
+    /* La funcion drawImage debe estar dentro de un evento
+       onload para mostrarse en el canvas.
+    */
+    img.onload = function() {
+        context.drawImage(img, 50, 50, 100, 100); 
+    };
+    // context.imageSmoothingEnabled = false;
 }
