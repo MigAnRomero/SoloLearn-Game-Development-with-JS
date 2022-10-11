@@ -1,6 +1,9 @@
 #canvas {
     width: 75%;
 }
+#canvas_two {
+    width: 75%;
+}
 #name {
     color: white;
     background-color: blue;
