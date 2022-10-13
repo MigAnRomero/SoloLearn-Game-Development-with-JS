@@ -1,8 +1,8 @@
 #canvas {
-    width: 75%;
-}
-#canvas_two {
-    width: 75%;
+    width: 50%;
+    padding: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 #name {
     color: white;
@@ -21,9 +21,13 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+button:hover {
+    background-color: rgb(187, 36, 36);
+    color: rgb(224, 106, 21);
+}
 canvas {
     background-color: honeydew;
-    padding: 10px;
+    border: 1px solid black;
 }
 footer {
     background-color: bisque;
