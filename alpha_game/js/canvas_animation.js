@@ -7,18 +7,27 @@ window.onload = function() {
 
     function draw() {
         // Limpiar el canvas cuando se termina la animacion
-        // context.clearReact(0, 0, 600, 400);
-
+        context.clearRect(0, 0, 600, 400);
+        
         context.beginPath();
         context.rect(x, y, 100, 100);
         context.fillStyle="red";
         context.fill();
 
-        x += 10;
-        if (x >= 600) {
-            x = -100;
+        x += 5;
+        if (x >= 500) {
+            // start drawing another cube to the beginning when its right x position reaches the end of canvas
+            context.beginPath();
+            context.rect(x-600, y, 100, 100)
+            context.fillStyle="blue";
+            context.fill();
+            // when it reaches fully
+            // you reset it
+            if (x>=600){
+                x = 0;
+            }
         }
       }    
     //   draw();
-    setInterval(draw, 50);
+    setInterval(draw, 30);
 }
