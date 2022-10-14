@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo_uno.css">
-    <script src="js/script_uno.js"></script>
+    <script src="js/game_logic.js"></script>
     <title>Desarrollando un videojuego con JS</title>
 </head>
 <body>
     <header>
-        <h1>Estudiando la etiqueta canvas</h1>
+        <h1>First Game</h1>
     </header>
     <main>
         <p class="name">
@@ -20,14 +20,16 @@
         <p class="name">
             Player Two
         </p>
-        <h2>Probando líneas, figuras e imagen:</h2>
-        <canvas id="canvas" width="600" height="400">
-            Your browser does not support the HTML5 canvas tag.          
-        </canvas><br><hr> 
+        <h2>Animación:</h2>
+        <div class="main-container">
+            <canvas id="canvas" width="600" height="400">
+                Your browser does not support the HTML5 canvas tag.          
+            </canvas><br>
+        </div>
+        <hr> 
         <button id="myButton" onclick="hello()">Click me</button>
         <button class="myButton" onclick="hit()">Golpe menor</button>
-        <button><a href="canvas_animation.html">Canvas Animation</a></button>
-        <button><a href="first_game.html">First Game</a></button>
+        <button><a href="index.html">Index</a></button>
     </main>
     <footer></footer>    
 </body>
