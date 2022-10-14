@@ -27,7 +27,12 @@ window.onload = function() {
                 x = 0;
             }
         }
-      }    
-    //   draw();
-    setInterval(draw, 30);
+      }
+      /*
+      Se puede reemplazar setInterval() con window.requestAnimationFrame() para evitar que, el navegador
+      del usuario, se vaya a bloquear en el redibujado, tomando en cuenta los recursos del sistema
+      para realizar el "game loop".
+       */
+    //   setInterval(draw, 30);
+    window.requestAnimationFrame(draw);
 }
