@@ -23,10 +23,12 @@ window.onload = function() {
             context.fill();
             // when it reaches fully
             // you reset it
-            if (x>=600){
+            if (x >= 600){
                 x = 0;
             }
         }
+
+        window.requestAnimationFrame(draw);
       }
       /*
       Se puede reemplazar setInterval() con window.requestAnimationFrame() para evitar que, el navegador
@@ -34,5 +36,5 @@ window.onload = function() {
       para realizar el "game loop".
        */
     //   setInterval(draw, 30);
-    window.requestAnimationFrame(draw);
+    draw();
 }
