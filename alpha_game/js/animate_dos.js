@@ -1,20 +1,7 @@
+// Code para el segundos canvas
 window.onload = function() {
-    // let test = Date.now();
-    // console.log(test);
-    // let test;
-
-    // function draw() {
-    //     let timePassed = (Date.now() - test) / 1000;
-    //     let fps = Math.round(1 / timePassed);
-    //     test = Date.now();
-    //     console.log("Segundos: " + test);
-    //     console.log("FPS: " + fps);
-    // }
-    // draw();
-    // draw();
-
     // Animaciones en el canvas:
-    let canvas = document.getElementById('canvas');
+    let canvas = document.getElementById('canvas_dos');
     let context = canvas.getContext("2d");
     let x = 0;
     let y = 100;
@@ -45,18 +32,13 @@ window.onload = function() {
         // x += 10;
         x += (speed * timePassed);
         
-        if (x >= 500) {
-            // start drawing another cube to the beginning when its right x position reaches the end of canvas
-            context.beginPath();
-            context.rect(x-600, y, 100, 100)
-            context.fillStyle="blue";
-            context.fill();
-            // when it reaches fully
-            // you reset it
-            if (x >= 600){
-                x = -0;
-            }
+        if (x >= 600 - 100) {
+            speed = 0;
         }
+
+        // if (x >= 600) {
+        //     x = -100;
+        // }
 
         window.requestAnimationFrame(draw);
       }

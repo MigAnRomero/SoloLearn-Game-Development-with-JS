@@ -4,6 +4,9 @@
     margin-left: 25%;
     margin-right: 25%;
 }
+#canvas_dos {
+    padding: 10px;
+}
 #name {
     color: white;
     background-color: blue;
