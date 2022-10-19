@@ -8,6 +8,8 @@ window.onload = function() {
     let test = Date.now();
     // Mover un objeto a 100px por segundo:
     let speed = 100;
+    // Direccion del momvimiento para el objeto:
+    let direct = 1;
 
     function draw() {
         let timePassed = (Date.now() - test) / 1000;
@@ -30,10 +32,13 @@ window.onload = function() {
         context.fill();
 
         // x += 10;
-        x += (speed * timePassed);
+        // x += (speed * timePassed);
+        // Direccion del objeto:
+        x += direct * (speed * timePassed);
         
-        if (x >= 600 - 100) {
-            speed = 0;
+        if (x >= 600 - 100 || x <= 0) {
+            // speed = 0;
+            direct *= -1;
         }
 
         // if (x >= 600) {
