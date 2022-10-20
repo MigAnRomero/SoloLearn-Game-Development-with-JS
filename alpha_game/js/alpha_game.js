@@ -3,8 +3,8 @@ window.onload = function() {
     // Animaciones en el canvas:
     let canvas = document.getElementById('canvas_dos');
     let context = canvas.getContext("2d");
-    let x = 300;
-    let y = 200;
+    let x = 250;
+    let y = 150;
     let test = Date.now();
     // Mover un objeto a 100px por segundo:
     let speed = 100;
@@ -15,6 +15,9 @@ window.onload = function() {
     let btn_left = document.getElementById('left');
     let btn_down = document.getElementById('down');
     let btn_right = document.getElementById('right');
+    // Variables para crear monedas doradas:
+    let coinx = Math.random() * (600-50);
+    let coiny = Math.random() * (400-50); 
 
     function draw() {
         let timePassed = (Date.now() - test) / 1000;
@@ -34,6 +37,12 @@ window.onload = function() {
         context.beginPath();
         context.rect(x, y, 100, 100);
         context.fillStyle="red";
+        context.fill();
+
+        // Dibujar las monedas
+        context.beginPath();
+        context.rect(coinx, coiny, 50, 50);
+        context.fillStyle = "#e3c228";
         context.fill();
 
         // Funciones para presionar los botones usando solo el MOUSE.
