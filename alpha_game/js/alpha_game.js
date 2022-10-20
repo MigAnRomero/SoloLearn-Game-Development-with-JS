@@ -17,7 +17,9 @@ window.onload = function() {
     let btn_right = document.getElementById('right');
     // Variables para crear monedas doradas:
     let coinx = Math.random() * (600-50);
-    let coiny = Math.random() * (400-50); 
+    let coiny = Math.random() * (400-50);
+    // Puntaje inicial:
+    let score = 0;
 
     function draw() {
         let timePassed = (Date.now() - test) / 1000;
@@ -43,6 +45,13 @@ window.onload = function() {
         context.beginPath();
         context.rect(coinx, coiny, 50, 50);
         context.fillStyle = "#e3c228";
+        context.fill();
+
+        // Mostrar resultado del puntaje
+        context.beginPath();
+        context.font = '25px Arial';
+        context.fillStyle = 'black';
+        context.fillText("Score: " + score, 20, 400);
         context.fill();
 
         // Funciones para presionar los botones usando solo el MOUSE.
@@ -136,6 +145,14 @@ window.onload = function() {
                 y += (speed * timePassed);
             }
         }
+
+        // Anotar numero de monedas recolectadas
+        if(coinx <= x + 100 && x <= coinx + 50 && 
+            coiny <= y + 100 && y <= coiny + 50) {
+                score++;
+                coinx = Math.random() * (600-50);
+                coiny = Math.random() * (400-50);
+            }
 
         window.requestAnimationFrame(draw);
       }
