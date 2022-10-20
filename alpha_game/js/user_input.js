@@ -9,7 +9,7 @@ window.onload = function() {
     // Mover un objeto a 100px por segundo:
     let speed = 100;
     // Direccion del momvimiento para el objeto:
-    let direct = 1;
+    let direct;
     // Codigo para los botones:
     let btn_up = document.getElementById('up');
     let btn_left = document.getElementById('left');
@@ -41,14 +41,47 @@ window.onload = function() {
         // Direccion del objeto:
         x += direct * (speed * timePassed);
         
-        if (x >= 600 - 100 || x <= 0) {
-            // speed = 0;
-            direct *= -1;
-        }
+        // if (x >= 600 - 100 || x <= 0) {
+        //     // speed = 0;
+        //     direct *= -1;
+        // }
 
         // if (x >= 600) {
         //     x = -100;
         // }
+
+        // Funciones para presionar los botones usando solo el MOUSE.
+        // Funcion para btn up
+        btn_up.onmousedown = function() {
+            direct = 3;
+        }
+        btn_up.onmouseup = function() {
+            direct = 0;
+        }
+
+        // Funcion para btn left
+        btn_left.onmousedown = function() {
+            direct = 2;
+        }
+        btn_left.onmouseup = function() {
+            direct = 0;
+        }
+
+        // Funcion para btn down
+        btn_down.onmousedown = function() {
+            direct = 4;
+        }
+        btn_down.onmouseup = function() {
+            direct = 0;
+        }
+
+        // Funcion para btn right
+        btn_right.onmousedown = function() {
+            direct = 1;
+        }
+        btn_right.onmouseup = function() {
+            direct = 0;
+        }
 
         window.requestAnimationFrame(draw);
       }
