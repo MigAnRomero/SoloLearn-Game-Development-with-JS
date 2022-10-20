@@ -102,22 +102,22 @@ window.onload = function() {
             direct = 0;
         }
 
-        // Movimiento del objeto
-        // btn_up
-        if(direct == 3) {
-            y -= (speed * timePassed);
+        // Movimiento del objeto                
+        if(direct == 1) {
+            // btn_right
+            x += (speed * timePassed);
         }
-        // btn_left
-        if(direct == 2) {
+        else if(direct == 2) {
+            // btn_left
             x -= (speed * timePassed);
         }
-        // btn_down
-        if(direct == 4) {
-            y += (speed * timePassed);
+        else if(direct == 3) {
+            // btn_up
+            y -= (speed * timePassed);
         }
-        // btn_right
-        if(direct == 1) {
-            x += (speed * timePassed);
+        else if(direct == 4) {
+            // btn_down
+            y += (speed * timePassed);
         }
 
         window.requestAnimationFrame(draw);
