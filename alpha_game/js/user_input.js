@@ -105,19 +105,27 @@ window.onload = function() {
         // Movimiento del objeto                
         if(direct == 1) {
             // btn_right
-            x += (speed * timePassed);
+            if(x + 100 < 600) {
+                x += (speed * timePassed);
+            }
         }
         else if(direct == 2) {
             // btn_left
-            x -= (speed * timePassed);
+            if(x > 0) {
+                x -= (speed * timePassed);
+            }
         }
         else if(direct == 3) {
             // btn_up
-            y -= (speed * timePassed);
+            if(y > 0) {
+                y -= (speed * timePassed);
+            }
         }
         else if(direct == 4) {
             // btn_down
-            y += (speed * timePassed);
+            if(y + 100 < 400) {
+                y += (speed * timePassed);
+            }
         }
 
         window.requestAnimationFrame(draw);
