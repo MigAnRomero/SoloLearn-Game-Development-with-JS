@@ -100,7 +100,25 @@ window.onload = function() {
         }
         btn_right.ontouchend = function() {
             direct = 0;
-        }        
+        }
+
+        // Movimiento del objeto
+        // btn_up
+        if(direct == 3) {
+            y -= (speed * timePassed);
+        }
+        // btn_left
+        if(direct == 2) {
+            x -= (speed * timePassed);
+        }
+        // btn_down
+        if(direct == 4) {
+            y += (speed * timePassed);
+        }
+        // btn_right
+        if(direct == 1) {
+            x += (speed * timePassed);
+        }
 
         window.requestAnimationFrame(draw);
       }
