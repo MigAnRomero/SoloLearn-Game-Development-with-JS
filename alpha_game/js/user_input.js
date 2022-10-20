@@ -3,8 +3,8 @@ window.onload = function() {
     // Animaciones en el canvas:
     let canvas = document.getElementById('canvas_dos');
     let context = canvas.getContext("2d");
-    let x = 0;
-    let y = 100;
+    let x = 300;
+    let y = 200;
     let test = Date.now();
     // Mover un objeto a 100px por segundo:
     let speed = 100;
@@ -35,20 +35,6 @@ window.onload = function() {
         context.rect(x, y, 100, 100);
         context.fillStyle="red";
         context.fill();
-
-        // x += 10;
-        // x += (speed * timePassed);
-        // Direccion del objeto:
-        x += direct * (speed * timePassed);
-        
-        // if (x >= 600 - 100 || x <= 0) {
-        //     // speed = 0;
-        //     direct *= -1;
-        // }
-
-        // if (x >= 600) {
-        //     x = -100;
-        // }
 
         // Funciones para presionar los botones usando solo el MOUSE.
         // Funcion para btn up
@@ -82,6 +68,39 @@ window.onload = function() {
         btn_right.onmouseup = function() {
             direct = 0;
         }
+
+        // Funciones para presionar los botones en pantallas tactiles
+        // Funcion para el btn up
+        btn_up.ontouchstart = function() {
+            direct = 3;
+        }
+        btn_up.ontouchend = function() {
+            direct = 0;
+        }
+
+        // Funcion para el btn left
+        btn_left.ontouchstart = function() {
+            direct = 2;
+        }
+        btn_left.ontouchend = function() {
+            direct = 0;
+        }
+        
+        // Funcion para el btn down
+        btn_down.ontouchstart = function() {
+            direct = 4;
+        }
+        btn_down.ontouchend = function() {
+            direct = 0;
+        }
+
+        // Funcion para el btn right
+        btn_right.ontouchstart = function() {
+            direct = 1;
+        }
+        btn_right.ontouchend = function() {
+            direct = 0;
+        }        
 
         window.requestAnimationFrame(draw);
       }
