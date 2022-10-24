@@ -1,5 +1,5 @@
 window.onload = function() {
-    const mainCanvas = document.getElementById("canvas");
+    const mainCanvas = document.getElementById("canvas_dos");
     const context = mainCanvas.getContext("2d");
 
     // Variables para las coordenadas del mouse
@@ -36,7 +36,7 @@ window.onload = function() {
 
     // funcion para dejar de dibujar en el canvas al soltar el clic
     const mouseUp = () => {
-        mainCanvas,removeEventListener("mousemove", mouseMoving);
+        mainCanvas.removeEventListener("mousemove", mouseMoving);
     };
 
     mainCanvas.addEventListener("mousedown", mouseDown);
