@@ -15,7 +15,7 @@ window.onload = function() {
     function draw() {
         for(let i = 0; i < objeto.length; i++) {
             context.fillStyle = objeto[i].color;
-            context.fillReact(objeto[i].x, objeto[i].y, objeto[i].width, objeto[i].height);
+            context.fillRect(objeto[i].x, objeto[i].y, objeto[i].width, objeto[i].height);
         }
     }
 
