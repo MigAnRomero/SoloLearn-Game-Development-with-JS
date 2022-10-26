@@ -47,13 +47,13 @@ window.onload = function() {
     contextoUno.moveTo(200,50);
     contextoUno.lineTo(200,150);
     contextoUno.lineTo(300,150);
-    contextoUno.fill();
+    contextoUno.fill();  // Se cierra la figura con relleno desde el ultimo punto inicial
      // c. Forma  cerrada sin relleno
     contextoUno.beginPath();
     contextoUno.moveTo(50,200);
     contextoUno.lineTo(50,300);
     contextoUno.lineTo(150,300);
-    contextoUno.closePath();
+    contextoUno.closePath(); // Se cierra la figura sin relleno desde el ultimo punto inicial
     contextoUno.stroke();
 
     // Id: pruebaDos
