@@ -38,6 +38,15 @@
     justify-content: center;
     align-items: center;
 }
+.snake_game {
+    /* CSS para el juego de la serpiente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
 body {
     background-color: chocolate;
     margin: 0;
